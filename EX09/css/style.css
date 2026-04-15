@@ -1,115 +1,135 @@
-body{
-  
+/* --- Reset & Font nền --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Global */
-.container{
-  
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background: #f0f2f5; /* Màu nền nhẹ nhàng hơn */
+    color: #333;
 }
 
-ul{
-  
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
 }
 
-.button_1{
-  
+/* --- Header & Navigation (Giữ nguyên phong cách chuyên nghiệp) --- */
+header {
+    background: #2c3e50;
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: #e67e22 4px solid;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.dark{
-  
+header #branding {
+    float: left;
 }
 
-/* Header **/
-header{
-  
+header #branding h1 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-header a{
-  
+header .highlight {
+    color: #e67e22;
 }
 
-header li{
-  
+header nav {
+    float: right;
+    margin-top: 10px;
 }
 
-header #branding{
-  
+header ul {
+    list-style: none;
 }
 
-header #branding h1{
-  
+header li {
+    display: inline;
+    margin-left: 25px;
 }
 
-header nav{
-  
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-header .highlight, header .current a{
- 
+header a:hover, header .current a {
+    color: #e67e22;
+    border-bottom: 2px solid #e67e22;
+    padding-bottom: 5px;
 }
 
-header a:hover{
-  
+/* --- Phần Nội dung Dịch vụ thú vị (Chỉ dùng CSS) --- */
+
+/* Biến danh sách dịch vụ thành các khối hiện đại */
+section ul, div ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px 0;
+    list-style: none;
 }
 
-/* Showcase */
-#showcase{
- 
+/* Biến mỗi thẻ <li> thành một chiếc "Card" */
+li {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    border: 1px solid #eee;
 }
 
-#showcase h1{
-  
+/* Hiệu ứng bay lên và đổ bóng khi di chuột qua */
+li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-color: #e67e22;
 }
 
-#showcase p{
- 
+/* Thêm một dấu gạch ngang trang trí phía dưới tiêu đề trong li */
+li strong, li b, li h3 {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
 }
 
-/* Newsletter */
-#newsletter{
-  
+li::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #e67e22;
+    margin: 15px auto 0;
+    transition: width 0.3s;
 }
 
-#newsletter h1{
-  
+li:hover::after {
+    width: 80px;
 }
 
-#newsletter form {
-  
+/* --- Responsive cho điện thoại --- */
+@media(max-width: 768px) {
+    header #branding, header nav, header li {
+        float: none;
+        text-align: center;
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .container {
+        width: 95%;
+    }
 }
-
-#newsletter input[type="email"]{
-  
-}
-
-/* Boxes */
-#boxes{
-  
-}
-
-#boxes .box{
-  
-}
-
-#boxes .box img{
-  
-}
-
-/* Sidebar */
-aside#sidebar{
-  
-}
-
-aside#sidebar .quote input, aside#sidebar .quote textarea{
-  
-}
-
-/* Main-col */
-article#main-col{
-  
-}
-
-footer{
-  
-}
-
